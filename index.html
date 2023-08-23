@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>K Fox Final</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- the below links allow the style sheets to access some google fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet"> 
+
+    <!-- the below link allows this page to access a style sheet -->
+    <link rel="stylesheet" href="styles.css">
+
+
+    <!-- The below script elements link to the javascript files that this page might need to use. -->
+    <script src="scripts/nightScript.js"></script>
+
+</head>
+
+
+<body>
+    
+    <header>
+        <h1 class="banner">Roller Coaster Minisite</h1>
+    </header>
+
+<!-- the nav element creates a "navigation bar" which contains the main links/buttons for each page of the website. in this case, it uses li elements with links to each of the main pages. There are also 2 input elements that function as buttons. They call the nightColorChanger-function in the nightScript.js file. This allows the user to switch the site to a dark-colored "night mode" if they're in a dark environment, which is less straining on the eyes. -->
+
+    <nav>
+        <menu>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#linkAnchor">Parks</a></li>
+            <li class="dayNight"><input id="dayButton" type="button" value="Day Mode" onclick="dayColorChanger()"></li>
+            <li class="dayNight"><input id="nightButton" type="button" value="Night Mode" onclick="nightColorChanger()"></li>
+        </menu>
+    </nav>
+
+<!-- the Main section contains the actual content of each page -->
+
+<main>
+
+    <h2>Kelbe's Roller-Coaster Enthusiast List for Wichita Natives</h2>
+
+    <p> 
+    Hello and thanks for visiting my page! My name is Kelbe Fox and I am a student working towards an associates in Web Development. I have studied HTML, CSS, PHP, and MySQL. This site is my final project for Javascript, and I chose my hobby of roller coasters as the subject matter. 
+    </p>
+
+    <p>  
+    As a roller coaster enthusiast, it can be a little daunting to live in a city without its own amusement park. Unfortunately, this is exactly the situation in my hometown of Wichita KS. Fortunately, there are 3 different amusement parks we can easily access within 300 miles (varying between a 2-5 hour drive). Although none of them are <span class="italic">huge</span> venues, they each offer a fun and unique lineup of rides. Keep reading to see the list below.
+    </p>
+    
+    <!-- this H1 has an id of "linkAnchor"so that users can click the "parks" link in the <nav> element at the top of each page. When they click that link, it takes them straight to this section of the index.html page. That way, its easier to access the list of amusement parks from any page in the website. -->
+    <h1 id="linkAnchor">Amusement Parks in the Wichita Area:</h1>
+    
+    <ul id="parksList">
+        <li><a href="pages/frontier.html">Frontier City</a></li>
+        <li><a href="pages/silver.html">Silver Dollar City</a></li>
+        <li><a href="pages/worlds.html">Worlds of Fun</a></li>    
+    </ul>
+    
+    
+    <p>
+        The links above connect to my lists of the roller coasters at each amusement park. I included basic stats like height, length, speed, etc. I also included some personal touches like a uniquely calculated "thrill score" (out of 10) based on those stats. Each ride also has a fun little quote based on how a passenger might react after riding. There's even an embedded video that showcases each roller coaster! At the bottom of each list, you can click a button to reveal which coaster is my personal favorite.
+    </p>
+
+    <p> 
+        Since I am a roller coaster enthusiast, the coasters are all I focused on with my pages above. Make no mistake though, each of these locations have a ton of different rides, entertainment, and even dining venues that you won't want to miss out on. Im also including links to each park's official website below so you can check them out.
+    </p>
+
+<!-- The below div contains the thumbnails for the links to each park's official website. Each thumbnail is an <img> element contained within an <a> element. That way, clicking on the thumbnail works as a link to the website. I also added target=”_blank”  code at the beginning of each <a> element so that the link opens in a new tab. -->
+  
+    <h2>Official Websites:</h2>
+
+    <div id="thumbnails">
+
+        <a target="_blank" href="https://www.sixflags.com/frontiercity"><img class="thumbnail" src="thumbnails/frontier.jpg" alt="Frontier City"></a>
+
+        <a target="_blank" href="https://www.silverdollarcity.com/"><img class="thumbnail" src="thumbnails/silver.jpg" alt="Silver Dollar City"></a>
+
+        <a target="_blank" href="https://www.worldsoffun.com/"><img class="thumbnail" src="thumbnails/worlds.jpg" alt="Worlds Of Fun"></a>
+
+    </div>
+    
+<P>Thanks again for visiting!</P>
+
+<footer>
+    <p class="copyrighttext">
+           Copyright &copy; 2022 Kelbe Fox
+    </p>
+</footer>
+
+  </main>
+
+</body>
+
+</html>

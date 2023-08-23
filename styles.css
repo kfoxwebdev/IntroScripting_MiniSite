@@ -1,0 +1,411 @@
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+	/* These 2 rules above make it so that any width/height rules apply to the border around elements instead of applying to the content (like words, paragraphs, & whatever) inside the element. 
+
+    Otherwise, if you add padding, it makes the element wider than 
+	whatever width/height rules you try to set. */
+
+
+
+
+
+
+
+
+    /* I made separate rules for the colors in the body-element. By default, it is brightly colored. However, the function in the nightscript.js file can add class="nightColor" to the body, which switches to a darker background color for the whole page. The "nightListColor" class does the same thing for the <dl> elements that make up the lists of roller coasters. */
+
+body {
+    color: #141414;
+    background-color: #eaeaea;
+}
+
+.nightColor {
+    color: #e4e2da;
+    background-color: #534e47;
+}
+
+.nightListColor {
+    color: #e4e2da;
+    background-color: #403c36;
+}
+
+
+
+
+
+
+
+
+    /* the other body rules set the font, size, and general look for the main area of each page */
+
+body {
+  margin: 0 auto;
+  max-width: 950px;
+  font-family: 'Roboto', Verdana, Tahoma, sans-serif;
+  font-size: 1em;
+  line-height: 1.4em;
+}
+	/* the 'Roboto' in the font-family is a google font, listed in the <head> element on each page */
+
+
+
+
+
+
+
+
+    /* banner rules for home page with slight variations for the banner background picture on each park's page */
+
+.banner {
+    font-family: 'Bebas Neue', Verdana, Tahoma, sans-serif;
+    text-align: center;
+    font-size: 4em;
+    letter-spacing: .15em;
+    color: #d8c999;
+    padding: 2em 0;
+    line-height: 2;
+    background-image: url(images/wildSunset.jpg);
+    background-attachment: fixed;
+    background-position: 15% 100%;
+    background-repeat: no-repeat;
+    margin: 2em 0 0 0;
+    box-shadow: 0 0 15px -5px rgba(0, 0, 0, 0.69), 0 0 6px -5px rgba(0, 0, 0, 0.69);
+}
+
+#fcBanner {
+    background-image: url(images/silver.jpg);
+    background-attachment: fixed;
+    background-position: 40% -10%;
+    background-repeat: no-repeat;
+    margin: 2em 0 0 0;
+}
+
+#sdcBanner {
+    background-image: url(images/outlaw.jpg);
+    background-attachment: fixed;
+    background-position: 50% 0%;
+    background-repeat: no-repeat;
+    margin: 2em 0 0 0;
+}
+
+#wofBanner {
+    background-image: url(images/mamba.jpg);
+    background-attachment: fixed;
+    background-position: 45% 45%;
+    background-repeat: no-repeat;
+    margin: 2em 0 0 0;
+}
+
+
+
+
+
+
+
+    /* general style rules for the font of some headings and italics, etc */
+
+h1 {
+    line-height: 1.2;
+    letter-spacing: .05em
+}
+
+h2 {
+    letter-spacing: .05em
+}
+
+
+.italic {
+    font-style: italic;
+}
+
+
+.copyrighttext {
+    font-size: 0.9em;
+    font-style: italic;
+}
+
+
+
+
+
+
+
+
+    /* style rules for the lists of Coaster-objects - these effect the color, placement, and float styles for each roller coaster in the <dl> lists. This way, each item appears in its own separate box that's a slightly different color from the background, making it easier to tell one listing from the next.  */
+
+iframe {
+    float: right;
+    margin: 3em 2em;
+    
+}
+
+dl {
+    background-color: #f4f4f4;
+    padding: 1em 0;
+}
+
+
+dt {
+    font-size: 1.5em;
+    letter-spacing: .2em;
+    padding: 1em;
+    
+}
+
+dd {
+    line-height: .3em;
+    padding: 1em;
+}
+
+
+
+
+
+
+
+
+    /* navigation menu styles */
+
+nav {
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+      /* these rules make the Nav bar stick to the top of the screen when you scroll down */
+  margin-bottom: 5em;
+}
+
+menu {  
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  box-shadow: -2px 0 25px -4px rgba(0, 0, 0, 0.69), -5px 0 5px -4px rgba(0, 0, 0, 0.69);
+  }
+
+    /* the below rules control the color & style of the links in the nav bar- making them stay the same colors even if they've been clicked so that the menu buttons look consistant. Although the background color does change for hover and clicks. */
+
+    li a {
+    font-size: 1.2em;
+    font-weight: bold;
+    display: block;
+    text-align: center;
+    padding: .5em 1em;
+    text-decoration: none;
+
+    }
+
+    li a:link {
+      color: #e4e2da;
+    }
+
+    li a:visited {
+      color: #e4e2da;
+    }
+
+    li a:hover {
+      color: #e4e2da;
+      background-color: #4d4d4d;
+    }
+
+    li a:active {
+      color: #e4e2da;
+      background-color: #272727;
+    }
+
+        /* the below rules make the main menu buttons stay to the left, except for the day-mode & night-mode buttons, which are on the right */
+
+        menu li {
+            float: left;
+        }
+
+        .dayNight {
+            color: #e4e2da;
+            float: right;
+            font-size: .9em;
+            font-weight: bold;
+            display: block;
+            text-align: center;
+            padding: 0;
+        }
+
+    /* These rules change the look of the <input> buttons that control day mode vs night mode. This way, the buttons look the same as the <a> links in the menu bar*/
+    
+    input {
+	    background: none;
+	    color: inherit;
+	    border: none;
+        padding: .65em 1em;
+	    font: inherit;
+	    cursor: pointer;
+	    outline: inherit;
+    }
+
+    input:hover {
+        color: #e4e2da;
+        background-color: #4d4d4d;
+    }
+
+    input:active {
+        color: #e4e2da;
+        background-color: #272727;
+    }
+
+
+
+
+
+
+
+    /* styles for the links to the amusement parks. The list of links is in a <ul> element, but I wanted them to have a similar look and feel to the links & buttons in the menu bar. I gave the <ul> an id of "parksList" so I scn use this style rule to make it a large block on the page with the same default color as the menu. Since the contents of the <ul> are also <a> links contained <li> elements (just like the links in the menu bar), the above style rules for "li a" apply to these links too.  */
+
+#parksList {
+    background-color: #333;
+    padding-left: 0;
+    list-style-type: none;
+    margin: 0;
+    line-height: 1.5;
+    font-size: 1.5em;
+    
+}
+
+
+
+
+
+
+
+    /* Amusement Park Thumbnail Style Rules - these style rules make the thumbnails on the home page stay centered, and they grow slightly larger if you hover a mouse over them.*/
+
+#thumbnails {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;          
+}
+
+.thumbnail {
+  height: 200px;
+  width: auto;
+  margin: 1em;
+}
+
+#thumbnails a {
+  transition: .3s ease-in-out;
+}
+
+#thumbnails a:hover {
+  transform: scale(1.2);
+}
+
+
+
+
+
+
+
+
+
+
+    /* rules for smaller screens and devices below - they change the margin sizes, and rearrange some elements for mobile devices. */
+
+
+
+@media screen and (max-width: 1400px) {
+    
+    body {
+        margin: 0% 15%;
+    }
+    
+    #homeBanner {
+        margin: 2em 0 0 0;
+    }
+}
+
+
+
+
+
+
+@media only screen and (max-width: 1000px) {
+    
+    body {
+        margin: 0% 5%;
+    }
+    #homeBanner {
+        margin: 2em 0 0 0;
+    }
+}
+
+
+
+
+
+
+@media only screen and (max-width: 750px) {
+    
+    iframe {
+        margin: 5% 15%;
+    }
+    
+    dl {
+        margin: 0;
+        padding-top: 235px;
+    }
+
+}
+
+
+
+
+
+    /* the style rules for small screens also rearrange the header, nav bar, and embedded videos */
+
+@media only screen and (max-width: 650px) {
+    
+    body {
+        margin: 0% 2%;
+    }
+
+    header h1 {
+        font-size: 2.25em;
+    }
+
+    menu li {
+        float: none;
+    }
+
+    li a {
+        text-align: left;
+        border-bottom: 1px solid #e4e2da;
+    }
+
+    .dayNight {
+        text-align: left;
+        float: left;
+    }
+        /*   ^  this makes the "Assignments" button stay to the left for the mobile version of the site.   */
+
+    nav {
+        position: relative;
+    }
+
+    iframe {
+
+        margin: 10%;
+    }
+    
+    dl {
+        margin: 0;
+        padding-top: 235px;
+    }
+
+}
+
+

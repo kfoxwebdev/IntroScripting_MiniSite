@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Worlds of Fun</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- the below links allow the style sheets to access some google fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet"> 
+
+    <!-- the below link allows this page to access a style sheet -->
+    <link rel="stylesheet" href="../styles.css">
+    
+   
+<!-- The below script elements link to the javascript files that this page might need to use. -->
+    <script src="../scripts/nightScript.js"></script>
+    <script src="../scripts/coasterLists.js"></script>
+    <script src="../scripts/bestCoaster.js"></script>
+    
+    <style>
+        h2 {text-align: center}
+    </style>
+        
+</head>
+
+
+<body>
+    
+    <header>
+        <h1 class="banner" id="wofBanner">Roller Coaster Minisite</h1>
+    </header>
+
+    <nav>
+        <menu>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../index.html#linkAnchor">Parks</a></li>
+            <li class="dayNight"><input id="dayButton" type="button" value="Day Mode" onclick="dayColorChanger()"></li>
+            <li class="dayNight"><input id="nightButton" type="button" value="Night Mode" onclick="nightColorChanger()"></li>
+        </menu>
+    </nav>
+
+   
+
+    <main>
+
+        <h1>Worlds of Fun</h1>
+
+        <p>This is the largest of the 3 parks, and it also features the tallest roller coaster in the area (205 feet!), and it has a large water-park attached too. At 205 miles from Wichita, the drive takes about 3 hours. It's possible to visit the park in a day-trip. However, it may be preferable to stay overnight if you want to avoid the 3 hour return-drive after a long day of thrills and chills. Additionally, it's located in Kansas City which has a lot of fun options for shopping, dining, museums, entertainment, and more. Worlds of fun is loosely themed after Jules Verne's "Around the World in Eighty Days." Various sections of the park are themed after different continents, including Europe, Asia, Africa, and "Americana" (yet another old-western theme). The themeing is mostly superficial, but the park's real attractions are, well, the attractions. Check out the list below to see what I mean.</p>
+        
+        <h2>Roller Coasters:</h2>
+        
+            <!-- The below <script> element calls the listCoasters function, so that the function document.writes each object here in the body. -->
+        <script> listCoasters(wofCoasters); </script>
+
+            <!-- This script element sets a global variable representing each amusement park. However, only this page's park is set to the boolean value of true. That way, the bestCoaster script can identify which park to use. -->
+        <script> 
+            var favFC = false;
+            var favSDC = false; 
+            var favWOF = true;
+        </script>
+    
+        <p>These all look amazing, but which coaster is the <span class="italic">best</span>? Technically that's up to everyone's personal preference. However, you can click the below button to reveal <span class="italic">my</span> opinion for this park's best coaster!</p>
+        
+        <button id="favButtonID">Drumroll Please...</button>
+        
+    <footer>
+        <p class="copyrighttext">
+           Copyright &copy; 2022 Kelbe Fox
+        </p>
+    </footer>
+
+    </main>
+
+
+</body>
+</html>

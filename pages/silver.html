@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Silver Dollar City</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- the below links allow the style sheets to access some google fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet"> 
+
+    <!-- the below link allows this page to access a style sheet -->
+    <link rel="stylesheet" href="../styles.css">
+    
+   
+<!-- The below script elements link to the javascript files that this page might need to use. -->
+    <script src="../scripts/nightScript.js"></script>
+    <script src="../scripts/coasterLists.js"></script>
+    <script src="../scripts/bestCoaster.js"></script>
+    
+    <style>
+        h2 {text-align: center}
+    </style>
+        
+</head>
+
+
+<body>
+    
+
+    <header>
+        <h1 class="banner" id="sdcBanner">Roller Coaster Minisite</h1>
+    </header>
+
+    <nav>
+        <menu>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../index.html#linkAnchor">Parks</a></li>
+            <li class="dayNight"><input id="dayButton" type="button" value="Day Mode" onclick="dayColorChanger()"></li>
+            <li class="dayNight"><input id="nightButton" type="button" value="Night Mode" onclick="nightColorChanger()"></li>
+        </menu>
+    </nav>
+
+   
+
+    <main>
+
+        <h1>Silver Dollar City</h1>
+
+        <p>The second largest park in the area is also one of the most unique. At 285 miles from Wichita, it's about a 5 hour drive. You'll probably want to stay overnight, or possibly 2 nights if you don't want to make the drive on the same day that you visit the park. Located in the sprawling forested hills of the Ozarks, Silver Dollar City is one of the most naturally beautiful parks around. What's more, the park features a huge natural wonder, Marvel Cave. They even offer walking cave tours at no extra charge! The park has an old western theme, and there are many things to do besides the rides. These include gift shops, live shows, demonstrations of glass blowing, blacksmithing, taffy pulling, and several <span class="italic">amazing</span> restaurants and snack venues.</p>
+        
+        <h2>Roller Coasters:</h2>
+        
+            <!-- The below <script> element calls the listCoasters function, so that the function document.writes each object here in the body. -->
+        <script> listCoasters(sdcCoasters); </script>
+
+            <!-- This script element sets a global variable representing each park. However, only this page's park is set to the boolean value of true. That way, the bestCoaster script can identify which park to use. -->
+        <script> 
+            var favFC = false;
+            var favSDC = true; 
+            var favWOF = false;
+        </script>
+    
+        <p>These all look amazing, but which coaster is the <span class="italic">best</span>? Technically that's up to everyone's personal preference. However, you can click the below button to reveal <span class="italic">my</span> opinion for this park's best coaster!</p>
+        
+        <button id="favButtonID">Drumroll Please...</button>
+        
+    <footer>
+        <p class="copyrighttext">
+           Copyright &copy; 2022 Kelbe Fox
+        </p>
+    </footer>
+
+    </main>
+
+
+</body>
+</html>
